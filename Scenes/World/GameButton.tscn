@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/World/GameButtonScript.gd" type="Script" id=1]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4, 2 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 4, 2 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 4, 2 )
+
+[node name="GameButton" type="AnimatedSprite"]
+frames = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="PerfectArea" type="Area2D" parent="."]
+
+[node name="PerfectCollisionShape" type="CollisionShape2D" parent="PerfectArea"]
+shape = SubResource( 2 )
+
+[node name="GreatArea" type="Area2D" parent="."]
+
+[node name="GreatCollisionShape" type="CollisionShape2D" parent="GreatArea"]
+shape = SubResource( 3 )
+
+[node name="GoodArea" type="Area2D" parent="."]
+
+[node name="GoodCollisionShape" type="CollisionShape2D" parent="GoodArea"]
+shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="PerfectArea" to="." method="_on_PerfectArea_area_entered"]
+[connection signal="area_exited" from="PerfectArea" to="." method="_on_PerfectArea_area_exited"]
+[connection signal="area_entered" from="GreatArea" to="." method="_on_GreatArea_area_entered"]
+[connection signal="area_exited" from="GreatArea" to="." method="_on_GreatArea_area_exited"]
+[connection signal="area_entered" from="GoodArea" to="." method="_on_GoodArea_area_entered"]
+[connection signal="area_exited" from="GoodArea" to="." method="_on_GoodArea_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

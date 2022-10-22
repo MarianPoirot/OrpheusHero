@@ -1,3 +1,27 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
 
-[node name="PlayingUI" type="Node2D"]
+[ext_resource path="res://Scripts/UI/PlayingScript.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/World/GameButton.tscn" type="PackedScene" id=2]
+
+[node name="PlayingUI" type="Control"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="LeftButton" parent="." instance=ExtResource( 2 )]
+
+[node name="MidLeftButton" parent="." instance=ExtResource( 2 )]
+
+[node name="MidButton" parent="." instance=ExtResource( 2 )]
+
+[node name="MidRightButton" parent="." instance=ExtResource( 2 )]
+
+[node name="RightButton" parent="." instance=ExtResource( 2 )]
+
+[node name="Score" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="combo" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0

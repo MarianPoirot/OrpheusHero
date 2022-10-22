@@ -1,4 +1,4 @@
-extends Node
+extends Control
 
 
 # Declare member variables here. Examples:
