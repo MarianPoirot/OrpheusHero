@@ -44,6 +44,8 @@ shape = SubResource( 4 )
 shape = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
 
 [connection signal="area_entered" from="PerfectArea" to="." method="_on_PerfectArea_area_entered"]
 [connection signal="area_exited" from="PerfectArea" to="." method="_on_PerfectArea_area_exited"]
