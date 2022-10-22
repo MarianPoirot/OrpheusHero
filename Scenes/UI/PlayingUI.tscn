@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/UI/PlayingScript.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/World/GameButton.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/Sprites/coin-yellow.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Sprites/coin-red.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Sprites/coin-green.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/cerberus.png" type="Texture" id=9]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -48,6 +49,11 @@ script = ExtResource( 1 )
 position = Vector2( 512, 300 )
 scale = Vector2( 0.533333, 0.555093 )
 texture = ExtResource( 4 )
+
+[node name="Kerberos" type="Sprite" parent="Sprite"]
+position = Vector2( 716.25, 329.675 )
+scale = Vector2( -0.566842, 0.566842 )
+texture = ExtResource( 9 )
 
 [node name="LeftButton" parent="." instance=ExtResource( 2 )]
 position = Vector2( 329, 565 )
