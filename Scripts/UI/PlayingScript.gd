@@ -14,3 +14,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Conductor_beat(position):
+	pass # Replace with function body.
+
+
+func _on_Conductor_measure(position):
+	pass # Replace with function body.
