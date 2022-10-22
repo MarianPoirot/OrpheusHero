@@ -6,15 +6,14 @@ const TARGET_Y = 164
 const SPAWN_Y = -16
 const DIST_TO_TARGET = TARGET_Y - SPAWN_Y
 
-const LEFT_LANE_SPAWN = Vector2(120, SPAWN_Y)
-const MID_LEFT_LANE_SPAWN = Vector2(140, SPAWN_Y)
-const CENTRE_LANE_SPAWN = Vector2(160, SPAWN_Y)
-const MID_RIGHT_LANE_SPAWN = Vector2(180, SPAWN_Y)
-const RIGHT_LANE_SPAWN = Vector2(200, SPAWN_Y)
+const LEFT_LANE_SPAWN = Vector2(329, SPAWN_Y)
+const MID_LEFT_LANE_SPAWN = Vector2(423, SPAWN_Y)
+const CENTRE_LANE_SPAWN = Vector2(515, SPAWN_Y)
+const MID_RIGHT_LANE_SPAWN = Vector2(607, SPAWN_Y)
+const RIGHT_LANE_SPAWN = Vector2(700, SPAWN_Y)
 
 var speed = 0
 var hit = false
-
 
 func _ready():
 	pass
