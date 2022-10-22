@@ -22,7 +22,7 @@ func _ready():
 func _physics_process(delta):
 	if !hit:
 		position.y += speed * delta
-		if position.y > 200:
+		if position.y > 600:
 			queue_free()
 			get_parent().reset_combo()
 	else:
