@@ -2,7 +2,7 @@ extends Area2D
 
 #A modifier
 
-const TARGET_Y = 164
+const TARGET_Y = 565
 const SPAWN_Y = -16
 const DIST_TO_TARGET = TARGET_Y - SPAWN_Y
 
