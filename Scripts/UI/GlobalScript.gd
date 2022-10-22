@@ -1,13 +1,12 @@
-extends CanvasLayer
+extends Node2D
 
-func _on_UIOpening_run_game():
-	$UIOpening.hide()
+var score = 0
+var combo = 0
+var great = 0
+var good = 0
+var okay = 0
+var missed = 0
+var grade = "NA"
 
-func display_Opening():
-	$UIOpening.show()
-
-func display_Ending():
-	$UIEnding.show()
-	
-func hide_Ending():
-	$UIEnding.hide()
+func set_score(new):
+	score = new
