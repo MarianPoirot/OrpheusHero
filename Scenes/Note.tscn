@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/NoteScript.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/star.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/coin-orange.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/coin-blue.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/coin-yellow.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/coin-red.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/coin-green.png" type="Texture" id=7]
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [  ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
