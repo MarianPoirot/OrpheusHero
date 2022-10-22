@@ -12,7 +12,7 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -20,7 +20,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -28,7 +28,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -36,7 +36,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
