@@ -17,7 +17,7 @@ script = ExtResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+[node name="SpriteStart" type="Sprite" parent="CanvasLayer"]
 
 [node name="TextureButton" type="Button" parent="CanvasLayer"]
 margin_left = 446.0

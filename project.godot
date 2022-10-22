@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Control",
+"class": "UIEnding",
+"language": "GDScript",
+"path": "res://Scripts/UI/EndingScript.gd"
+} ]
+_global_script_class_icons={
+"UIEnding": ""
+}
+
 [application]
 
 config/name="OrpheusHero"
