@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/UI/PlayingScript.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/World/GameButton.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/Sprites/coin-red.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Sprites/coin-green.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Sprites/cerberus.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/orpheus.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -51,9 +52,14 @@ scale = Vector2( 0.533333, 0.555093 )
 texture = ExtResource( 4 )
 
 [node name="Kerberos" type="Sprite" parent="Sprite"]
-position = Vector2( 716.25, 329.675 )
-scale = Vector2( -0.566842, 0.566842 )
+position = Vector2( 680.342, 286.619 )
+scale = Vector2( -0.681577, 0.681577 )
 texture = ExtResource( 9 )
+
+[node name="Orpheus" type="Sprite" parent="Sprite"]
+position = Vector2( -686.25, 313.461 )
+scale = Vector2( 0.466078, 0.466078 )
+texture = ExtResource( 10 )
 
 [node name="LeftButton" parent="." instance=ExtResource( 2 )]
 position = Vector2( 329, 565 )
@@ -61,22 +67,22 @@ scale = Vector2( 0.132, 0.132 )
 input = "Left"
 
 [node name="MidLeftButton" parent="." instance=ExtResource( 2 )]
-position = Vector2( 700, 565 )
+position = Vector2( 423, 565 )
 frames = SubResource( 1 )
 input = "MidLeft"
 
 [node name="MidButton" parent="." instance=ExtResource( 2 )]
-position = Vector2( 607, 565 )
+position = Vector2( 515, 565 )
 frames = SubResource( 2 )
 input = "Middle"
 
 [node name="MidRightButton" parent="." instance=ExtResource( 2 )]
-position = Vector2( 423, 565 )
+position = Vector2( 607, 565 )
 frames = SubResource( 3 )
 input = "MidRight"
 
 [node name="RightButton" parent="." instance=ExtResource( 2 )]
-position = Vector2( 515, 565 )
+position = Vector2( 700, 565 )
 frames = SubResource( 4 )
 input = "Right"
 
