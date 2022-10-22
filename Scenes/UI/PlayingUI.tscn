@@ -63,7 +63,6 @@ texture = ExtResource( 10 )
 
 [node name="LeftButton" parent="." instance=ExtResource( 2 )]
 position = Vector2( 329, 565 )
-scale = Vector2( 0.132, 0.132 )
 input = "Left"
 
 [node name="MidLeftButton" parent="." instance=ExtResource( 2 )]
