@@ -171,7 +171,7 @@ func increment_score(by):
 		missed += 1
 	
 	multiplier = min(5,round(0.25*combo))
-	score += by * multiplier
+	score += by * max(multiplier, 1)
 	$Score.text = str(score)
 	
 	if combo < 5:
