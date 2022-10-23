@@ -11,14 +11,17 @@ func _unhandled_input(event):
 	if event.is_action(input):
 		if event.is_action_pressed(input):
 			if note!=null:
+				var score = 0
 				if perfect:
-					get_parent().increment_score(4)
+					score = 4
 				elif great:
-					get_parent().increment_score(3)
+					score = 3
 				elif good:
-					get_parent().increment_score(2)
+					score = 2
 				elif ok:
-					get_parent().increment_score(1)
+					score = 1
+				get_parent().increment_score(score)
+				note.destroy(score);
 			else:
 				get_parent().increment_score(0)
 			self.modulate = Color(5, 5, 5)
