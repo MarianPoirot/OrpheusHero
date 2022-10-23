@@ -46,33 +46,77 @@ func _on_Conductor_measure(position):
 
 func _on_Conductor_beat(position):
 	song_position_in_beats = position
-	match song_position_in_beats:
-		28,44,60,76,92,108: 
-			spawn_1_beat = 1
-			spawn_2_beat = 0
-			spawn_3_beat = 0
-			spawn_4_beat = 1
-		32, 36, 48, 64, 68, 80, 96, 100, 112: 
-			spawn_1_beat = 0
-			spawn_2_beat = 0
-			spawn_3_beat = 0
-			spawn_4_beat = 1
-		40,72,104: 
-			spawn_1_beat = 1
-			spawn_2_beat = 0
-			spawn_3_beat = 1
-			spawn_4_beat = 0
-		52,84,116: 
-			spawn_1_beat = 1
-			spawn_2_beat = 0
-			spawn_3_beat = 0
-			spawn_4_beat = 0
-		56,88,120:
-			spawn_1_beat = 0
-			spawn_2_beat = 0
-			spawn_3_beat = 0
-			spawn_4_beat = 0
-		4000:	#end of song
+	if song_position_in_beats<161:
+		match song_position_in_beats:
+			28,44,60,76,92,108,124,140: 
+				spawn_1_beat = 1
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 1
+			32, 36, 48, 64, 68, 80, 96, 100, 112,128,132,144: 
+				spawn_1_beat = 0
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 1
+			40,72,104,136: 
+				spawn_1_beat = 1
+				spawn_2_beat = 0
+				spawn_3_beat = 1
+				spawn_4_beat = 0
+			52,84,116: 
+				spawn_1_beat = 1
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 0
+			56,88,120,160:
+				spawn_1_beat = 0
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 0
+			148:
+				spawn_1_beat = 1
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 1
+			152:
+				spawn_1_beat = 0
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 1
+			156:
+				spawn_1_beat = 1
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 0
+	elif song_position_in_beats > 219 and song_position_in_beats<350:
+		match song_position_in_beats:
+			220,224,228,248,284:					
+				spawn_1_beat = 1
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 0	
+			236:
+				spawn_1_beat = 1
+				spawn_2_beat = 1
+				spawn_3_beat = 1
+				spawn_4_beat = 0
+			256:
+				spawn_1_beat = 1
+				spawn_2_beat = 0
+				spawn_3_beat = 1
+				spawn_4_beat = 0
+			240,244,260,264,268:
+				spawn_1_beat = 0
+				spawn_2_beat = 1
+				spawn_3_beat = 0
+				spawn_4_beat = 0
+			232,252,272,288:
+				spawn_1_beat = 0
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 0
+				
+	elif song_position_in_beats>4000: 	#end of song
 			#write scores
 			#Global.set_score(score)
 			#Global.combo = max_combo
@@ -82,9 +126,6 @@ func _on_Conductor_beat(position):
 			#Global.missed = missed
 			if get_tree().change_scene("res://Scenes/UI/EndingUI.tscn") != OK:
 				print ("Error changing scene to End")
-
-		_:
-			pass
 
 func _spawn_notes(to_spawn):
 	if to_spawn > 0:
