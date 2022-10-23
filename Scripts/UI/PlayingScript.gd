@@ -19,7 +19,7 @@ var sec_per_beat = 60.0 / bpm
 
 var spawn_1_beat = 0
 var spawn_2_beat = 0
-var spawn_3_beat = 1
+var spawn_3_beat = 0
 var spawn_4_beat = 0
 
 var lane = 0
@@ -31,7 +31,7 @@ var multiplier
 
 func _ready():
 	randomize()
-	$Conductor.play_with_beat_offset(8)
+	$Conductor.play_with_beat_offset(9)
 
 
 func _on_Conductor_measure(position):
@@ -46,72 +46,45 @@ func _on_Conductor_measure(position):
 
 func _on_Conductor_beat(position):
 	song_position_in_beats = position
-	if song_position_in_beats > 36:
-		spawn_1_beat = 1
-		spawn_2_beat = 1
-		spawn_3_beat = 1
-		spawn_4_beat = 1
-	if song_position_in_beats > 98:
-		spawn_1_beat = 2
-		spawn_2_beat = 0
-		spawn_3_beat = 1
-		spawn_4_beat = 0
-	if song_position_in_beats > 132:
-		spawn_1_beat = 0
-		spawn_2_beat = 2
-		spawn_3_beat = 0
-		spawn_4_beat = 2
-	if song_position_in_beats > 162:
-		spawn_1_beat = 2
-		spawn_2_beat = 2
-		spawn_3_beat = 1
-		spawn_4_beat = 1
-	if song_position_in_beats > 194:
-		spawn_1_beat = 2
-		spawn_2_beat = 2
-		spawn_3_beat = 1
-		spawn_4_beat = 2
-	if song_position_in_beats > 228:
-		spawn_1_beat = 0
-		spawn_2_beat = 2
-		spawn_3_beat = 1
-		spawn_4_beat = 2
-	if song_position_in_beats > 258:
-		spawn_1_beat = 1
-		spawn_2_beat = 2
-		spawn_3_beat = 1
-		spawn_4_beat = 2
-	if song_position_in_beats > 288:
-		spawn_1_beat = 0
-		spawn_2_beat = 2
-		spawn_3_beat = 0
-		spawn_4_beat = 2
-	if song_position_in_beats > 322:
-		spawn_1_beat = 3
-		spawn_2_beat = 2
-		spawn_3_beat = 2
-		spawn_4_beat = 1
-	if song_position_in_beats > 388:
-		spawn_1_beat = 1
-		spawn_2_beat = 0
-		spawn_3_beat = 0
-		spawn_4_beat = 0
-	if song_position_in_beats > 396:
-		spawn_1_beat = 0
-		spawn_2_beat = 0
-		spawn_3_beat = 0
-		spawn_4_beat = 0
-	if song_position_in_beats > 404:	#end of song
-		#write scores
-		#Global.set_score(score)
-		#Global.combo = max_combo
-		#Global.great = great
-		#Global.good = good
-		#Global.okay = okay
-		#Global.missed = missed
-		if get_tree().change_scene("res://Scenes/UI/EndingUI.tscn") != OK:
-			print ("Error changing scene to End")
+	match song_position_in_beats:
+		28,44,60,76,92,108: 
+			spawn_1_beat = 1
+			spawn_2_beat = 0
+			spawn_3_beat = 0
+			spawn_4_beat = 1
+		32, 36, 48, 64, 68, 80, 96, 100, 112: 
+			spawn_1_beat = 0
+			spawn_2_beat = 0
+			spawn_3_beat = 0
+			spawn_4_beat = 1
+		40,72,104: 
+			spawn_1_beat = 1
+			spawn_2_beat = 0
+			spawn_3_beat = 1
+			spawn_4_beat = 0
+		52,84,116: 
+			spawn_1_beat = 1
+			spawn_2_beat = 0
+			spawn_3_beat = 0
+			spawn_4_beat = 0
+		56,88,120:
+			spawn_1_beat = 0
+			spawn_2_beat = 0
+			spawn_3_beat = 0
+			spawn_4_beat = 0
+		4000:	#end of song
+			#write scores
+			#Global.set_score(score)
+			#Global.combo = max_combo
+			#Global.great = great
+			#Global.good = good
+			#Global.okay = okay
+			#Global.missed = missed
+			if get_tree().change_scene("res://Scenes/UI/EndingUI.tscn") != OK:
+				print ("Error changing scene to End")
 
+		_:
+			pass
 
 func _spawn_notes(to_spawn):
 	if to_spawn > 0:

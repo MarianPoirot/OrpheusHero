@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/UI/PlayingScript.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/World/GameButton.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Assets/Sprites/orpheus.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Font/Nightmare_Hero_Normal.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://Assets/Font/HopeGold.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Assets/Sounds/Lifelight (Kazoo Cover) - Super Smash Bros. Ultimate.mp3" type="AudioStream" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -110,6 +111,8 @@ margin_bottom = 97.0
 custom_fonts/font = SubResource( 6 )
 
 [node name="Conductor" parent="." instance=ExtResource( 3 )]
+stream = ExtResource( 13 )
+bpm = 536
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]
