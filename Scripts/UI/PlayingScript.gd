@@ -26,6 +26,7 @@ var lane = 0
 var rand = 0
 var note = load("res://Scenes/Note.tscn")
 var instance
+var multiplier
 
 
 func _ready():
@@ -145,19 +146,20 @@ func increment_score(by):
 	else:
 		missed += 1
 	
-	score += by * combo
+	multiplier = min(5,round(0.25*combo))
+	score += by * multiplier
 	$Score.text = str(score)
 	
 	if combo < 5:
 		$Combo.text = ""
 	elif combo < 30:
-		$Combo.text = str(combo) + " combo!"
+		$Combo.text = str(combo) + " combo! x" + str(multiplier)
 		if combo > max_combo:
 			max_combo = combo
 	elif combo < 60:
-		$Combo.text = str(combo) + " you're on fire!"
+		$Combo.text = str(combo) + " you're on fire! x" + str(multiplier)
 	else :
-		$Combo.text = str(combo) + " you're unstoppable!"
+		$Combo.text = str(combo) + " you're unstoppable! x"+ str(multiplier)
 
 
 func reset_combo():
