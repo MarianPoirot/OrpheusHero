@@ -21,8 +21,9 @@ _global_script_class_icons={
 [application]
 
 config/name="OrpheusHero"
+config/description="Un jeu de rythme inspiré par le mythe d'Orphée et Eurydice."
 run/main_scene="res://Scenes/UI/OpeningUI.tscn"
-config/icon="res://icon.png"
+config/icon="res://Assets/Sprites/icon.png"
 
 [display]
 
