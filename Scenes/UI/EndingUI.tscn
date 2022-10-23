@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/UI/EndingScript.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Font/HopeGold.ttf" type="DynamicFontData" id=2]
@@ -10,6 +10,10 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
 font_data = ExtResource( 2 )
 
 [node name="EndingUI" type="Control"]
@@ -32,13 +36,21 @@ text = "Et c'est ainsi qu'Orphée retrouva sa promise."
 align = 1
 autowrap = true
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-margin_left = 155.779
-margin_top = 436.539
-margin_right = 506.779
-margin_bottom = 477.539
+[node name="End" type="Label" parent="CanvasLayer"]
+margin_left = 346.8
+margin_top = 92.0866
+margin_right = 697.8
+margin_bottom = 133.087
 custom_fonts/font = SubResource( 2 )
 text = "Fin"
 align = 1
 autowrap = true
 uppercase = true
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+margin_left = 694.374
+margin_top = 364.194
+margin_right = 894.374
+margin_bottom = 415.194
+custom_fonts/font = SubResource( 3 )
+text = "Score : 0"
