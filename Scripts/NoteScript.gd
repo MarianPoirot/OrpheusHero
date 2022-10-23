@@ -58,17 +58,17 @@ func destroy(score):
 	$Timer.start()
 	hit = true
 	if score == 4:
-		$Node2D/Label.text = "PERFECT"
-		$Node2D/Label.modulate = Color("ffddbd")
+		$Node2D/Label.text = "Τέλειο"
+		$Node2D/Label.modulate = Color("8465ec")
 	elif score == 3:
-		$Node2D/Label.text = "GREAT"
-		$Node2D/Label.modulate = Color("f6d6bd")
+		$Node2D/Label.text = "Μεγάλη"
+		$Node2D/Label.modulate = Color("a32858")
 	elif score == 2:
-		$Node2D/Label.text = "GOOD"
-		$Node2D/Label.modulate = Color("c3a38a")
+		$Node2D/Label.text = "Καλή"
+		$Node2D/Label.modulate = Color("ea6262")
 	elif score == 1:
-		$Node2D/Label.text = "OK"
-		$Node2D/Label.modulate = Color("997577")
+		$Node2D/Label.text = "Εντάξει"
+		$Node2D/Label.modulate = Color("fcef8d")
 
 
 func _on_Timer_timeout():

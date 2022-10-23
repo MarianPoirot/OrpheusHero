@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/Sprites/coin-yellow.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Sprites/coin-red.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Sprites/coin-green.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Font/Nightmare_Hero_Normal.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Assets/Font/PressStart2P-Regular.ttf" type="DynamicFontData" id=8]
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -21,6 +21,8 @@ animations = [ {
 extents = Vector2( 11, 11 )
 
 [sub_resource type="DynamicFont" id=3]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
 [node name="Note" type="Area2D" groups=["note"]]
@@ -49,7 +51,7 @@ texture = ExtResource( 2 )
 margin_right = 40.0
 margin_bottom = 14.0
 rect_scale = Vector2( 2, 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 3 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
