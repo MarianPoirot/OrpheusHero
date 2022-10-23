@@ -51,7 +51,7 @@ position = Vector2( 0, 7.57582 )
 shape = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.05
+wait_time = 0.01
 one_shot = true
 
 [connection signal="area_entered" from="PerfectArea" to="." method="_on_PerfectArea_area_entered"]

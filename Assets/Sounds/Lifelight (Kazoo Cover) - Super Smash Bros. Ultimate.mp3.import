@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Lifelight (Kazoo Cover) - Super Smash Bros. Ultimate
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
