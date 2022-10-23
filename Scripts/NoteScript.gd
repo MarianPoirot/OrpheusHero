@@ -60,7 +60,7 @@ func destroy(score):
 	if score == 4:
 		$Node2D/Label.text = "PERFECT"
 		$Node2D/Label.modulate = Color("ffddbd")
-	if score == 3:
+	elif score == 3:
 		$Node2D/Label.text = "GREAT"
 		$Node2D/Label.modulate = Color("f6d6bd")
 	elif score == 2:

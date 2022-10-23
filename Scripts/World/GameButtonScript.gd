@@ -1,9 +1,6 @@
 extends AnimatedSprite
 
-var perfect=false;
-var great=false;
-var good=false;
-var ok=false;
+var score
 var note=null;	#note which will be given
 export var input =""
 
@@ -11,15 +8,6 @@ func _unhandled_input(event):
 	if event.is_action(input):
 		if event.is_action_pressed(input):
 			if note!=null:
-				var score = 0
-				if perfect:
-					score = 4
-				elif great:
-					score = 3
-				elif good:
-					score = 2
-				elif ok:
-					score = 1
 				get_parent().increment_score(score)
 				note.destroy(score);
 			else:
@@ -30,33 +18,43 @@ func _unhandled_input(event):
 		
 func _on_PerfectArea_area_entered(area):
 	if area.is_in_group("note"):
-		perfect=true
+		score = 4
 
 
 func _on_PerfectArea_area_exited(area):
 	if area.is_in_group("note"):
-		perfect=false
+		score = 3
 
 
 func _on_GreatArea_area_entered(area):
 	if area.is_in_group("note"):
-		great=true
+		score = 3
 
 
 func _on_GreatArea_area_exited(area):
 	if area.is_in_group("note"):
-		great=false
+		score = 2
 
 
 func _on_GoodArea_area_entered(area):
 	if area.is_in_group("note"):
-		good=true
+		score = 2
 		note = area	#when you enter the largest area, you init note to give to non null
 
 
 func _on_GoodArea_area_exited(area):
 	if area.is_in_group("note"):
-		good=false
+		score = 1
+		note = null	#when you exit the largest area, you put the note to give to null
+
+func _on_OkArea_area_entered(area):
+	if area.is_in_group("note"):
+		score = 1
+		note = area	#when you enter the largest area, you init note to give to non null
+
+func _on_OkArea_area_exited(area):
+	if area.is_in_group("note"):
+		score = 0
 		note = null	#when you exit the largest area, you put the note to give to null
 
 func _on_Timer_timeout():
