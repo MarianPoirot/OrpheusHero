@@ -109,7 +109,7 @@ func _on_Conductor_beat(position):
 		#Global.good = good
 		#Global.okay = okay
 		#Global.missed = missed
-		if get_tree().change_scene("res://Scenes/End.tscn") != OK:
+		if get_tree().change_scene("res://Scenes/UI/EndingUI.tscn") != OK:
 			print ("Error changing scene to End")
 
 
