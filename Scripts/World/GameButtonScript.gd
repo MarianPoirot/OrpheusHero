@@ -39,13 +39,11 @@ func _on_GreatArea_area_exited(area):
 func _on_GoodArea_area_entered(area):
 	if area.is_in_group("note"):
 		score = 2
-		note = area	#when you enter the largest area, you init note to give to non null
 
 
 func _on_GoodArea_area_exited(area):
 	if area.is_in_group("note"):
 		score = 1
-		note = null	#when you exit the largest area, you put the note to give to null
 
 func _on_OkArea_area_entered(area):
 	if area.is_in_group("note"):

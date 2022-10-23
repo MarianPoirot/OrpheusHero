@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lifelight (Kazoo Cover) - Super Smash Bros. Ultimate.mp3-a87ba5164bd495e03b08464d456b58e7.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Lifelight (Kazoo Cover) - Super Smash Bros. Ultimate.mp3"
+dest_files=[ "res://.import/Lifelight (Kazoo Cover) - Super Smash Bros. Ultimate.mp3-a87ba5164bd495e03b08464d456b58e7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
