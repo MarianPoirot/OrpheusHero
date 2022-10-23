@@ -154,7 +154,7 @@ func _on_Conductor_beat(position):
 				spawn_4_beat = 0
 	elif song_position_in_beats>560: 	#end of song
 			#write scores
-			#Global.set_score(score)
+			Global.score = score
 			#Global.combo = max_combo
 			#Global.great = great
 			#Global.good = good
