@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/UI/EndingScript.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Font/HopeGold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Sprites/ending.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -17,6 +18,9 @@ script = ExtResource( 1 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="SpriteEurydice" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 529.084, 301.001 )
+scale = Vector2( 0.562621, 0.562621 )
+texture = ExtResource( 3 )
 
 [node name="Lore" type="Label" parent="CanvasLayer"]
 margin_left = 352.0
@@ -24,15 +28,15 @@ margin_top = 30.0
 margin_right = 703.0
 margin_bottom = 87.0
 custom_fonts/font = SubResource( 1 )
-text = "Et c'est ainsi qu'Orpheus retrouva sa promise"
+text = "Et c'est ainsi qu'Orphée retrouva sa promise."
 align = 1
 autowrap = true
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-margin_left = 352.0
-margin_top = 550.0
-margin_right = 703.0
-margin_bottom = 569.0
+margin_left = 155.779
+margin_top = 436.539
+margin_right = 506.779
+margin_bottom = 477.539
 custom_fonts/font = SubResource( 2 )
 text = "Fin"
 align = 1
