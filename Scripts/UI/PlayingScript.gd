@@ -90,22 +90,22 @@ func _on_Conductor_beat(position):
 				spawn_4_beat = 0
 	elif song_position_in_beats > 219 and song_position_in_beats<480:
 		match song_position_in_beats:
-			220,224,228,248,284,288,292,312,336,344,352:					
+			220,224,228,248,284,288,292,312,336,344,352,356,360,380,416:					
 				spawn_1_beat = 1
 				spawn_2_beat = 0
 				spawn_3_beat = 0
 				spawn_4_beat = 0	
-			236,300:
+			236,300,368:
 				spawn_1_beat = 1
 				spawn_2_beat = 1
 				spawn_3_beat = 1
 				spawn_4_beat = 0
-			256:
+			256,388:
 				spawn_1_beat = 1
 				spawn_2_beat = 0
 				spawn_3_beat = 1
 				spawn_4_beat = 0
-			240,244,260,264,268,304,308,332:
+			240,244,260,264,268,304,308,332,372,376,392,396,400:
 				spawn_1_beat = 0
 				spawn_2_beat = 1
 				spawn_3_beat = 0
@@ -115,12 +115,12 @@ func _on_Conductor_beat(position):
 				spawn_2_beat = 0
 				spawn_3_beat = 0
 				spawn_4_beat = 1
-			320,324,328:
+			320,328:
 				spawn_1_beat = 0
 				spawn_2_beat = 0
 				spawn_3_beat = 1
 				spawn_4_beat = 0
-			232,252,272,296,340,348,356:
+			232,252,272,296,340,348,364,384,404,416:
 				spawn_1_beat = 0
 				spawn_2_beat = 0
 				spawn_3_beat = 0
