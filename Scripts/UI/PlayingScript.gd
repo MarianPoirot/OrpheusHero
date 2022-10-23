@@ -90,12 +90,12 @@ func _on_Conductor_beat(position):
 				spawn_4_beat = 0
 	elif song_position_in_beats > 219 and song_position_in_beats<480:
 		match song_position_in_beats:
-			220,224,228,248,284,288,292,312,336,344,352,356,360,380,416:					
+			220,224,228,248,284,288,292,312,336,344,352,356,360,380,416,420,424,444,468,472:					
 				spawn_1_beat = 1
 				spawn_2_beat = 0
 				spawn_3_beat = 0
 				spawn_4_beat = 0	
-			236,300,368:
+			236,300,368,432:
 				spawn_1_beat = 1
 				spawn_2_beat = 1
 				spawn_3_beat = 1
@@ -105,28 +105,54 @@ func _on_Conductor_beat(position):
 				spawn_2_beat = 0
 				spawn_3_beat = 1
 				spawn_4_beat = 0
-			240,244,260,264,268,304,308,332,372,376,392,396,400:
+			240,244,260,264,268,304,308,332,372,376,392,396,400,436,440,464:
 				spawn_1_beat = 0
 				spawn_2_beat = 1
 				spawn_3_beat = 0
 				spawn_4_beat = 0
-			316:
+			316,448:
 				spawn_1_beat = 1
 				spawn_2_beat = 0
 				spawn_3_beat = 0
 				spawn_4_beat = 1
-			320,328:
+			328,460:
 				spawn_1_beat = 0
 				spawn_2_beat = 0
 				spawn_3_beat = 1
 				spawn_4_beat = 0
-			232,252,272,296,340,348,364,384,404,416:
+			232,252,272,296,320,324,340,348,364,384,404,428,448,452,456,476:
 				spawn_1_beat = 0
 				spawn_2_beat = 0
 				spawn_3_beat = 0
 				spawn_4_beat = 0
-				
-	elif song_position_in_beats>492: 	#end of song
+	elif song_position_in_beats > 479 and song_position_in_beats<560:
+		match song_position_in_beats:
+			480:
+				spawn_1_beat = 1
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 0
+			484,504:
+				spawn_1_beat = 1
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 1
+			488:
+				spawn_1_beat = 0
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 1
+			496,500:
+				spawn_1_beat = 0
+				spawn_2_beat = 1
+				spawn_3_beat = 0
+				spawn_4_beat = 0
+			492,508:
+				spawn_1_beat = 0
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 0
+	elif song_position_in_beats>560: 	#end of song
 			#write scores
 			#Global.set_score(score)
 			#Global.combo = max_combo
