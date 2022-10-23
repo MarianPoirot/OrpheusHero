@@ -53,21 +53,22 @@ func initialize(lane):
 
 
 func destroy(score):
+	$CollisionShape2D.set_disabled(true);
 	$CPUParticles2D.emitting = true
 	$AnimatedSprite.visible = false
 	$Timer.start()
 	hit = true
 	if score == 4:
-		$Node2D/Label.text = "Τέλειο"
-		$Node2D/Label.modulate = Color("8465ec")
+		$Node2D/Label.text = "Τέλειο" # Perfect
+		$Node2D/Label.modulate = Color("390947")
 	elif score == 3:
-		$Node2D/Label.text = "Μεγάλη"
+		$Node2D/Label.text = "Μεγάλη" # Great
 		$Node2D/Label.modulate = Color("a32858")
 	elif score == 2:
-		$Node2D/Label.text = "Καλή"
+		$Node2D/Label.text = "Καλή" # Good
 		$Node2D/Label.modulate = Color("ea6262")
 	elif score == 1:
-		$Node2D/Label.text = "Εντάξει"
+		$Node2D/Label.text = "Εντάξει" # OK
 		$Node2D/Label.modulate = Color("fcef8d")
 
 
