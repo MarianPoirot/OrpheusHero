@@ -12,13 +12,13 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 120, 30 )
+extents = Vector2( 120, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 120, 90 )
+extents = Vector2( 120, 70 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 120, 150 )
+extents = Vector2( 120, 140 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 120, 210 )
@@ -60,6 +60,6 @@ one_shot = true
 [connection signal="area_exited" from="GreatArea" to="." method="_on_GreatArea_area_exited"]
 [connection signal="area_entered" from="GoodArea" to="." method="_on_GoodArea_area_entered"]
 [connection signal="area_exited" from="GoodArea" to="." method="_on_GoodArea_area_exited"]
-[connection signal="area_entered" from="OKArea2" to="." method="_on_GoodArea_area_entered"]
-[connection signal="area_exited" from="OKArea2" to="." method="_on_GoodArea_area_exited"]
+[connection signal="area_entered" from="OKArea2" to="." method="_on_OkArea_area_entered"]
+[connection signal="area_exited" from="OKArea2" to="." method="_on_OkArea_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

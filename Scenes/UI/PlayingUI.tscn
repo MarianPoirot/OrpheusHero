@@ -103,10 +103,10 @@ margin_bottom = 24.0
 custom_fonts/font = SubResource( 5 )
 
 [node name="Combo" type="Label" parent="."]
-margin_left = 50.0
-margin_top = 10.0
-margin_right = 90.0
-margin_bottom = 24.0
+margin_left = 10.0
+margin_top = 50.0
+margin_right = 50.0
+margin_bottom = 97.0
 custom_fonts/font = SubResource( 6 )
 
 [node name="Conductor" parent="." instance=ExtResource( 3 )]
