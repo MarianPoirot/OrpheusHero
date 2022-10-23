@@ -1,9 +1,17 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/UI/OpeningScript.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Font/Nightmare_Hero_Normal.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/Font/HopeGold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets/Sprites/opening.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/UI/Tuto.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="ShortCut" id=4]
+resource_local_to_scene = true
 
 [sub_resource type="DynamicFont" id=2]
 size = 32
@@ -23,28 +31,40 @@ position = Vector2( 501.778, 299.478 )
 scale = Vector2( 0.56372, 0.56372 )
 texture = ExtResource( 4 )
 
+[node name="Tuto" parent="CanvasLayer" instance=ExtResource( 5 )]
+margin_left = 114.478
+margin_top = 96.8577
+margin_right = 114.478
+margin_bottom = 96.8577
+
 [node name="TextureButton" type="Button" parent="CanvasLayer"]
-margin_left = 446.0
-margin_top = 500.0
-margin_right = 578.0
-margin_bottom = 532.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -66.0
+margin_top = 33.137
+margin_right = 66.0
+margin_bottom = 65.137
+custom_fonts/font = SubResource( 3 )
+shortcut = SubResource( 4 )
 text = "Commencer"
 
 [node name="Lore" type="Label" parent="CanvasLayer"]
-margin_left = 356.951
-margin_top = 145.0
-margin_right = 907.951
-margin_bottom = 292.0
+margin_left = 428.766
+margin_top = 143.74
+margin_right = 979.766
+margin_bottom = 290.74
 custom_fonts/font = SubResource( 2 )
 text = "Eurydice a été mordue par un serpent et a succombé à ses blessures. 
 Son fiancé Orphée ne compte pas en rester là, il se rend aux enfers bien décidé à casser des culs !"
 autowrap = true
 
 [node name="Title" type="Label" parent="CanvasLayer"]
-margin_left = 352.0
-margin_top = 30.0
-margin_right = 672.0
-margin_bottom = 132.0
+margin_left = 423.815
+margin_top = 28.7401
+margin_right = 774.815
+margin_bottom = 168.74
 custom_fonts/font = SubResource( 1 )
 text = "Orpheus Hero"
 
