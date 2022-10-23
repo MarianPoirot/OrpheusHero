@@ -88,14 +88,14 @@ func _on_Conductor_beat(position):
 				spawn_2_beat = 0
 				spawn_3_beat = 0
 				spawn_4_beat = 0
-	elif song_position_in_beats > 219 and song_position_in_beats<350:
+	elif song_position_in_beats > 219 and song_position_in_beats<480:
 		match song_position_in_beats:
-			220,224,228,248,284:					
+			220,224,228,248,284,288,292,312,336,344,352:					
 				spawn_1_beat = 1
 				spawn_2_beat = 0
 				spawn_3_beat = 0
 				spawn_4_beat = 0	
-			236:
+			236,300:
 				spawn_1_beat = 1
 				spawn_2_beat = 1
 				spawn_3_beat = 1
@@ -105,18 +105,28 @@ func _on_Conductor_beat(position):
 				spawn_2_beat = 0
 				spawn_3_beat = 1
 				spawn_4_beat = 0
-			240,244,260,264,268:
+			240,244,260,264,268,304,308,332:
 				spawn_1_beat = 0
 				spawn_2_beat = 1
 				spawn_3_beat = 0
 				spawn_4_beat = 0
-			232,252,272,288:
+			316:
+				spawn_1_beat = 1
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 1
+			320,324,328:
+				spawn_1_beat = 0
+				spawn_2_beat = 0
+				spawn_3_beat = 1
+				spawn_4_beat = 0
+			232,252,272,296,340,348,356:
 				spawn_1_beat = 0
 				spawn_2_beat = 0
 				spawn_3_beat = 0
 				spawn_4_beat = 0
 				
-	elif song_position_in_beats>4000: 	#end of song
+	elif song_position_in_beats>492: 	#end of song
 			#write scores
 			#Global.set_score(score)
 			#Global.combo = max_combo
