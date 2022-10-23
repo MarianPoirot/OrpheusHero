@@ -152,6 +152,33 @@ func _on_Conductor_beat(position):
 				spawn_2_beat = 0
 				spawn_3_beat = 0
 				spawn_4_beat = 0
+			#TO CHANGE !!!!!!
+			512:
+				spawn_1_beat = 0
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 1
+			520:
+				spawn_1_beat = 0
+				spawn_2_beat = 0
+				spawn_3_beat = 1
+				spawn_4_beat = 0
+			524:
+				spawn_1_beat = 0
+				spawn_2_beat = 0
+				spawn_3_beat = 1
+				spawn_4_beat = 0
+			528:
+				spawn_1_beat = 1
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 1
+			532:
+				spawn_1_beat = 0
+				spawn_2_beat = 0
+				spawn_3_beat = 0
+				spawn_4_beat = 1
+			##########################
 	elif song_position_in_beats>560: 	#end of song
 			#write scores
 			Global.score = score
