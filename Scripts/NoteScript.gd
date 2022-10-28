@@ -53,7 +53,7 @@ func initialize(lane):
 
 
 func destroy(score):
-	$CollisionShape2D.set_disabled(true);
+	#$CollisionShape2D.set_disabled(true);
 	$CPUParticles2D.emitting = true
 	$AnimatedSprite.visible = false
 	$Timer.start()

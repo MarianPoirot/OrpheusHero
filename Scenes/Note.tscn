@@ -40,8 +40,14 @@ emitting = false
 amount = 16
 lifetime = 0.3
 one_shot = true
-explosiveness = 1.0
+explosiveness = 0.8
 texture = ExtResource( 2 )
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 100.0
+linear_accel = -100.0
 
 [node name="Timer" type="Timer" parent="."]
 
